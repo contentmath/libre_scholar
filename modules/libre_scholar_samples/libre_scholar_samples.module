@@ -1,0 +1,236 @@
+<?php
+
+function libre_scholar_samples_islandora_required_objects(IslandoraTuque $connection) {
+  $module_path = drupal_get_path('module', 'libre_scholar_samples');
+
+  // Root Collection.
+  $root_collection = $connection->repository->constructObject('librescholar:root');
+  $root_collection->owner = 'fedoraAdmin';
+  $root_collection->label = 'Publications & Entities';
+  $root_collection->models = 'islandora:collectionCModel';
+  $root_collection->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', 'islandora:root');
+  // TN Datastream.
+  $thumbnail_datastream = $root_collection->constructDatastream('TN', 'M');
+  $thumbnail_datastream->label = 'Thumbnail';
+  $thumbnail_datastream->mimetype = 'image/png';
+  $thumbnail_datastream->setContentFromFile("$module_path/images/folder.png", FALSE);
+  $root_collection->ingestDatastream($thumbnail_datastream);
+  // Collection policy datastream.
+  $root_cp_datastream = $root_collection->constructDatastream('COLLECTION_POLICY', 'X');
+  $root_cp_datastream->label = 'Collection policy';
+  $root_cp_datastream->mimetype = 'text/xml';
+  $root_cp_datastream->setContentFromFile("$module_path/xml/root_collection_policy.xml", FALSE);
+  $root_collection->ingestDatastream($root_cp_datastream);
+
+  // Organizations Collection.
+  $org_collection = $connection->repository->constructObject('librescholar:organizations');
+  $org_collection->owner = 'fedoraAdmin';
+  $org_collection->label = 'Organizations';
+  $org_collection->models = 'islandora:collectionCModel';
+  $org_collection->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', 'librescholar:root');
+  // TN Datastream.
+  $org_thumbnail_datastream = $org_collection->constructDatastream('TN', 'M');
+  $org_thumbnail_datastream->label = 'Thumbnail';
+  $org_thumbnail_datastream->mimetype = 'image/png';
+  $org_thumbnail_datastream->setContentFromFile("$module_path/images/folder.png", FALSE);
+  $org_collection->ingestDatastream($org_thumbnail_datastream);
+  // Collection policy datastream.
+  $org_cp_datastream = $org_collection->constructDatastream('COLLECTION_POLICY', 'X');
+  $org_cp_datastream->label = 'Collection policy';
+  $org_cp_datastream->mimetype = 'text/xml';
+  $org_cp_datastream->setContentFromFile("$module_path/xml/organization_collection_policy.xml", FALSE);
+  $org_collection->ingestDatastream($org_cp_datastream);
+
+  // People Collection.
+  $people_collection = $connection->repository->constructObject('librescholar:people');
+  $people_collection->owner = 'fedoraAdmin';
+  $people_collection->label = 'People';
+  $people_collection->models = 'islandora:collectionCModel';
+  $people_collection->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', 'librescholar:root');
+  // TN Datastream.
+  $people_thumbnail_datastream = $people_collection->constructDatastream('TN', 'M');
+  $people_thumbnail_datastream->label = 'Thumbnail';
+  $people_thumbnail_datastream->mimetype = 'image/png';
+  $people_thumbnail_datastream->setContentFromFile("$module_path/images/folder.png", FALSE);
+  $people_collection->ingestDatastream($people_thumbnail_datastream);
+  // Collection policy datastream.
+  $people_cp_datastream = $people_collection->constructDatastream('COLLECTION_POLICY', 'X');
+  $people_cp_datastream->label = 'Collection policy';
+  $people_cp_datastream->mimetype = 'text/xml';
+  $people_cp_datastream->setContentFromFile("$module_path/xml/people_collection_policy.xml", FALSE);
+  $people_collection->ingestDatastream($people_cp_datastream);
+
+  // Citation Collection.
+  $citation_collection = $connection->repository->constructObject('librescholar:citations');
+  $citation_collection->owner = 'fedoraAdmin';
+  $citation_collection->label = 'Citations';
+  $citation_collection->models = 'islandora:collectionCModel';
+  $citation_collection->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', 'librescholar:root');
+  // TN Datastream.
+  $citation_thumbnail_datastream = $citation_collection->constructDatastream('TN', 'M');
+  $citation_thumbnail_datastream->label = 'Thumbnail';
+  $citation_thumbnail_datastream->mimetype = 'image/png';
+  $citation_thumbnail_datastream->setContentFromFile("$module_path/images/folder.png", FALSE);
+  $citation_collection->ingestDatastream($citation_thumbnail_datastream);
+  // Collection policy datastream.
+  $citation_cp_datastream = $citation_collection->constructDatastream('COLLECTION_POLICY', 'X');
+  $citation_cp_datastream->label = 'Collection policy';
+  $citation_cp_datastream->mimetype = 'text/xml';
+  $citation_cp_datastream->setContentFromFile("$module_path/xml/citation_collection_policy.xml", FALSE);
+  $citation_collection->ingestDatastream($citation_cp_datastream);
+
+  // Thesis Collection.
+  $thesis_collection = $connection->repository->constructObject('librescholar:theses');
+  $thesis_collection->owner = 'fedoraAdmin';
+  $thesis_collection->label = 'Theses';
+  $thesis_collection->models = 'islandora:collectionCModel';
+  $thesis_collection->relationships->add(FEDORA_RELS_EXT_URI, 'isMemberOfCollection', 'librescholar:root');
+  // TN Datastream.
+  $thesis_thumbnail_datastream = $thesis_collection->constructDatastream('TN', 'M');
+  $thesis_thumbnail_datastream->label = 'Thumbnail';
+  $thesis_thumbnail_datastream->mimetype = 'image/png';
+  $thesis_thumbnail_datastream->setContentFromFile("$module_path/images/folder.png", FALSE);
+  $thesis_collection->ingestDatastream($thesis_thumbnail_datastream);
+  // Collection policy datastream.
+  $thesis_cp_datastream = $thesis_collection->constructDatastream('COLLECTION_POLICY', 'X');
+  $thesis_cp_datastream->label = 'Collection policy';
+  $thesis_cp_datastream->mimetype = 'text/xml';
+  $thesis_cp_datastream->setContentFromFile("$module_path/xml/thesis_collection_policy.xml", FALSE);
+  $thesis_collection->ingestDatastream($thesis_cp_datastream);
+
+  return array(
+    'libre_scholar_samples' => array(
+      'title' => 'Libre Scholar',
+      'objects' => array(
+        $root_collection,
+        $org_collection,
+        $people_collection,
+        $citation_collection,
+        $thesis_collection,
+      ),
+    ),
+  );
+}
+
+//@TODO: generalize
+function libre_scholar_samples_create($namespace = 'librescholar', $owner_uid = 1) {
+  module_load_include('inc', 'islandora_usage_stats', 'includes/utilities');
+  variable_set('islandora_usage_stats_ip_list', '');
+  $_SERVER['HTTP_USER_AGENT'] = 'Mozilla';
+  $module_path = drupal_get_path('module', 'libre_scholar_samples');
+  $created_pids = array();
+  $user = user_load($owner_uid);
+
+  $org_info = array(
+    array('pid' => $namespace . ':org1', 'name' => 'School of Communication', 'mads' => 'communication_mads.xml'),
+    array('pid' => $namespace . ':org2', 'name' => 'School of Engineering', 'mads' => 'engineering_mads.xml'),
+    array('pid' => $namespace . ':org3', 'name' => 'Department of Biology', 'mads' => 'biology_mads.xml'),
+  );
+
+  foreach ($org_info as $org) {
+    $obj = islandora_object_load($org['pid']);
+    if ($obj) {
+      islandora_delete_object($obj);
+    }
+    $object = islandora_prepare_new_object($org['pid'], $org['name'], array(array('dsid' => 'MADS', 'label' => 'MADS', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/organizations/' . $org['mads'])), array(ISLANDORA_ENTITIES_ORGANIZATION_CONTENT_MODEL), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'librescholar:organizations')));
+    $object->owner = $user->name;
+    $object = islandora_add_object($object);
+    $created_pids[] = $org['pid'];
+  }
+
+  $people_info = array(
+    array('pid' => $namespace . ':person1', 'name' => 'James Kirk', 'tn' => 'kirk.jpg', 'mads' => 'kirk_mads.xml'),
+    array('pid' => $namespace . ':person2', 'name' => 'Nyota Uhura', 'tn' => 'uhura.jpg', 'mads' => 'uhura_mads.xml'),
+    array('pid' => $namespace . ':person3', 'name' => 'Hikaru Sulu', 'tn' => 'sulu.jpg', 'mads' => 'sulu_mads.xml'),
+    array('pid' => $namespace . ':person4', 'name' => 'Leonard McCoy', 'tn' => 'mccoy.jpg', 'mads' => 'mccoy_mads.xml'),
+  );
+
+  foreach ($people_info as $person) {
+    $obj = islandora_object_load($person['pid']);
+    if ($obj) {
+      islandora_delete_object($obj);
+    }
+    $object = islandora_prepare_new_object($person['pid'], $person['name'], array(
+      array('dsid' => 'MADS', 'label' => 'MADS', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/people/' . $person['mads']),
+      array('dsid' => 'TN', 'label' => $person['tn'], 'mimetype' => 'image/jpeg', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/people/' . $person['tn'])
+    ), array(ISLANDORA_ENTITIES_PERSON_CONTENT_MODEL), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'librescholar:people')));
+    $object->owner = $user->name;
+    $object = islandora_add_object($object);
+
+    $created_pids[] = $person['pid'];
+  }
+
+  $citation_info = array(
+    array('pid' => $namespace . ':citation1', 'title' => 'Flexible, Adaptive Archetypes for Cache Coherence', 'mods' => '1.xml', 'pdf' => '1.pdf'),
+    array('pid' => $namespace . ':citation2', 'title' => 'The postmaterial paradigm of reality in the works of Pynchon', 'mods' => '2.xml', 'pdf' => '1.pdf'),
+    array('pid' => $namespace . ':citation3', 'title' => 'Cultural desituationism in the works of Lynch', 'mods' => '3.xml', 'pdf' => '4.pdf'),
+    array('pid' => $namespace . ':citation4', 'title' => 'Decoupling Hash Tables from Architecture in Access Points', 'mods' => '4.xml', 'pdf' => '4.pdf'),
+    array('pid' => $namespace . ':citation5', 'title' => 'The postdialectic paradigm of narrative in the works of Rushdie', 'mods' => '5.xml', 'pdf' => '6.pdf'),
+    array('pid' => $namespace . ':citation6', 'title' => 'Investigating Neural Networks Using Autonomous Modalities', 'mods' => '6.xml', 'pdf' => '6.pdf'),
+    array('pid' => $namespace . ':citation7', 'title' => 'The Influence of Introspective Theory on Replicated Saturated Cryptoanalysis', 'mods' => '7.xml', 'pdf' => '7.pdf'),
+    array('pid' => $namespace . ':citation8', 'title' => 'Deconstructing Suffix Trees', 'mods' => '8.xml', 'pdf' => '8.pdf'),
+    array('pid' => $namespace . ':citation9', 'title' => 'Decoupling Robots from Sensor Networks in Context-Free Grammar', 'mods' => '9.xml', 'pdf' => '9.pdf'),
+    array('pid' => $namespace . ':citation10', 'title' => 'Socialism and semioticist precapitalist theory', 'mods' => '10.xml', 'pdf' => '9.pdf'),
+    array('pid' => $namespace . ':citation11', 'title' => 'Write-Back Caches No Longer Considered Harmful', 'mods' => '11.xml', 'pdf' => '11.pdf'),
+    array('pid' => $namespace . ':citation12', 'title' => 'Subsemiotic theory, rationalism and the cultural paradigm of narrative', 'mods' => '12.xml', 'pdf' => '11.pdf'),
+  );
+
+  foreach ($citation_info as $citation) {
+    $obj = islandora_object_load($citation['pid']);
+    if ($obj) {
+      islandora_delete_object($obj);
+    }
+    $object = islandora_prepare_new_object($citation['pid'], $citation['title'], array(
+      array('dsid' => 'MODS', 'label' => 'MODS', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/citations/' . $citation['mods']),
+      array('dsid' => 'PDF', 'label' => 'PDF', 'mimetype' => 'application/pdf', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/citations/' . $citation['pdf']),
+    ), array('ir:citationCModel'), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'librescholar:citations')));
+    $object->owner = $user->name;
+    $object = islandora_add_object($object);
+
+    $view_count = mt_rand(20, 110);
+    for ($i = 0; $i < $view_count; $i++) {
+      islandora_usage_stats_log_object_view($object);
+      unset($_SESSION['islandora_usage_stats']);
+    }
+
+    $dl_count = mt_rand(10, $view_count);
+    for ($i = 0; $i < $dl_count; $i++) {
+      islandora_usage_stats_log_datastream_download($object->id, 'PDF');
+      unset($_SESSION['islandora_usage_stats']);
+    }
+    $created_pids[] = $citation['pid'];
+  }
+
+  $thesis_info = array(
+    array('pid' => $namespace . ':thesis1', 'title' => 'Free Will and Determinism', 'mods' => '1.xml', 'pdf' => '1.pdf'),
+  );
+
+  foreach ($thesis_info as $thesis) {
+    $obj = islandora_object_load($thesis['pid']);
+    if ($obj) {
+      islandora_delete_object($obj);
+    }
+    $object = islandora_prepare_new_object($thesis['pid'], $thesis['title'], array(
+      array('dsid' => 'MODS', 'label' => 'MODS', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/theses/' . $thesis['mods']),
+      array('dsid' => 'PDF', 'label' => 'PDF', 'mimetype' => 'application/pdf', 'control_group' => 'M', 'datastream_file' => $module_path . '/files/theses/' . $thesis['pdf']),
+    ), array('ir:thesisCModel'), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'librescholar:theses')));
+    $object->owner = $user->name;
+    $object = islandora_add_object($object);
+
+    $view_count = mt_rand(20, 110);
+    for ($i = 0; $i < $view_count; $i++) {
+      islandora_usage_stats_log_object_view($object);
+      unset($_SESSION['islandora_usage_stats']);
+    }
+
+    $dl_count = mt_rand(10, $view_count);
+    for ($i = 0; $i < $dl_count; $i++) {
+      islandora_usage_stats_log_datastream_download($object->id, 'PDF');
+      unset($_SESSION['islandora_usage_stats']);
+    }
+    $created_pids[] = $thesis['pid'];
+  }
+
+  variable_set('islandora_usage_stats_ip_list', 'localhost 127.0.0.1');
+  variable_set('libre_scholar_samples_pids', $created_pids);
+}

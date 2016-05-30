@@ -1,0 +1,5 @@
+name = Libre Scholar Config
+description = Initial configuration steps for Libre Scholar
+core = 7.x
+version = 7.x-dev
+package = Libre Scholar

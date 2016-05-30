@@ -1,0 +1,17 @@
+<?php
+
+function libre_scholar_samples_install() {
+  islandora_install_solution_pack('libre_scholar_samples');
+
+  // Create sample items.
+  libre_scholar_samples_create();
+}
+
+function libre_scholar_samples_uninstall() {
+  $created_pids = variable_get('libre_scholar_samples_pids', array());
+  foreach ($created_pids as $pid) {
+    $object = islandora_object_load($pid);
+    islandora_delete_object($object);
+  }
+  variable_del('libre_scholar_samples_pids');
+}

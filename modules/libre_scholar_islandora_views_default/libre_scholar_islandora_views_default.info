@@ -1,0 +1,7 @@
+name = Libre Scholar Islandora Views Default
+description = Provide default views contextual filters for Islandora.
+core = 7.x
+version = 7.x-dev
+dependencies[] = islandora_solr_views
+files[] = includes/views_plugin_argument_libre_scholar_islandora_views_default_organization.inc
+files[] = includes/views_plugin_argument_libre_scholar_islandora_views_default_person.inc

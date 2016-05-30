@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <titleInfo>
+        <title>Write-Back Caches No Longer Considered Harmful</title>
+        <subTitle/>
+    </titleInfo>
+    <titleInfo type="abbreviated">
+        <title/>
+    </titleInfo>
+    <genre>book chapter</genre>
+    <abstract>In the works of Smith, a predominant concept is the distinction between without and within. If the dialectic paradigm of consensus holds, the works of Smith are an example of mythopoetical libertarianism. Therefore, cultural dematerialism implies that the goal of the writer is social comment, but only if Baudrillard&#x2019;s essay on the dialectic paradigm of consensus is valid; if that is not the case, the establishment is capable of intent.</abstract>
+    <accessCondition type="useAndReproduction"/>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+        <namePart type="given">Nyota</namePart>
+        <namePart type="family">Uhura</namePart>
+        <displayForm>Nyota Uhura</displayForm>
+        <affiliation>School of Communication</affiliation>
+    </name>
+    <name type="corporate">
+        <namePart/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <originInfo>
+        <dateIssued qualifier="">01/08/1994</dateIssued>
+        <publisher>Covehead Press</publisher>
+        <place>
+            <placeTerm type="text"/>
+        </place>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <location>
+        <url/>
+    </location>
+    <note type="type of work"/>
+    <subject>
+        <topic>caching</topic>
+    </subject>
+    <note type="publication status"/>
+    <identifier type="isbn"/>
+    <identifier type="issn">0273-2289</identifier>
+    <identifier type="doi">123457</identifier>
+    <identifier type="accessnum"/>
+    <identifier type="pmc"/>
+    <identifier type="uri"/>
+    <identifier type="citekey"/>
+    <part>
+        <date/>
+        <detail type="volume">
+            <number/>
+        </detail>
+        <detail type="issue">
+            <number/>
+        </detail>
+        <extent unit="page">
+            <start>17</start>
+            <end>45</end>
+        </extent>
+    </part>
+    <language>
+        <languageTerm/>
+    </language>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Caching Theory</title>
+        </titleInfo>
+        <titleInfo type="abbreviated">
+            <title/>
+        </titleInfo>
+        <originInfo>
+            <issuance/>
+        </originInfo>
+        <genre/>
+        <identifier type="issn"/>
+        <identifier type="serial number"/>
+        <name type="corporate">
+            <namePart/>
+            <role>
+                <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            </role>
+        </name>
+    </relatedItem>
+    <note/>
+    <accessCondition type="use and reproduction">author</accessCondition><physicalDescription authority="local">PUBLISHED</physicalDescription></mods>

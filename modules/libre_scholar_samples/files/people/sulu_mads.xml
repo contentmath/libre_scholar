@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<mads xmlns="http://www.loc.gov/mads/v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mads="http://www.loc.gov/mads/v2">
+    <authority>
+        <name type="personal">
+            <namePart type="given">Hikaru</namePart>
+            <namePart type="family">Sulu</namePart>
+            <namePart type="date"/>
+        </name>
+        <titleInfo>
+            <title>Hikaru Sulu</title>
+        </titleInfo>
+    </authority>
+    <variant>
+        <name>
+            <namePart type="given"/>
+            <namePart type="family"/>
+        </name>
+    </variant>
+    <affiliation>
+        <organization>School of Engineering</organization>
+        <position>Postdoc</position>
+        <email/>
+        <phone>555-555-5555</phone>
+        <dateValid point="start">2014</dateValid>
+        <dateValid point="end"/>
+    </affiliation>
+    <fieldOfActivity/>
+    <identifier type="u1"/>
+    <note type="status">current</note>
+    <note type="history">Hikaru is working to complete his second PhD.</note>
+    <note/>
+    <note type="address"/>
+    <url/>
+</mads>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<mads xmlns="http://www.loc.gov/mads/v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mads="http://www.loc.gov/mads/v2">
+    <authority>
+        <name type="corporate">
+            <namePart>Department of Biology</namePart>
+            <namePart type="date"/>
+        </name>
+    </authority>
+    <related type="parentOrg">
+        <name type="corporate">
+            <namePart>School of Science</namePart>
+        </name>
+    </related>
+    <related type="earlier">
+        <name type="corporate">
+            <namePart/>
+            <namePart type="date"/>
+        </name>
+    </related>
+    <identifier type="u2"/>
+    <note type="historical"/>
+    <url/>
+</mads>

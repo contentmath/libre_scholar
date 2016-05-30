@@ -1,0 +1,9 @@
+name = Libre Scholar Rules
+core = 7.x
+package = Libre Scholar
+version = 7.x-1.0
+dependencies[] = entity
+dependencies[] = islandora
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_inactive_object_ingested_ex_islandora_simple_workflow_

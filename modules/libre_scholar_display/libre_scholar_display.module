@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Libre Scholar Display feature.
+ */
+
+include_once 'libre_scholar_display.features.inc';

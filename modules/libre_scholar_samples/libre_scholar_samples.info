@@ -1,0 +1,7 @@
+name = Libre Scholar Samples
+description = A module to create sample objects to populate a Libre Scholar installation.
+core = 7.x
+dependencies[] = islandora_scholar
+dependencies[] = islandora_entities
+version = 7.x-dev
+package = Libre Scholar

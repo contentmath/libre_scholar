@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_views_api().
+ */
+function libre_scholar_islandora_views_default_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_views_plugins().
+ */
+function libre_scholar_islandora_views_default_views_plugins() {
+
+  $plugins = array(
+    'argument default' => array(
+      'libre_scholar_islandora_views_default_current_organization' => array(
+        'title' => t('Current Islandora Entity Organization'),
+        'handler' => 'views_plugin_argument_libre_scholar_islandora_views_default_organization',
+      ),
+      'libre_scholar_islandora_views_default_current_person' => array(
+        'title' => t('Current Islandora Entity Person'),
+        'handler' => 'views_plugin_argument_libre_scholar_islandora_views_default_person',
+      ),
+    ),
+  );
+
+  return $plugins;
+}

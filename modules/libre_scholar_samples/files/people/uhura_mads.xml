@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<mads xmlns="http://www.loc.gov/mads/v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mads="http://www.loc.gov/mads/v2">
+    <authority>
+        <name type="personal">
+            <namePart type="given">Nyota</namePart>
+            <namePart type="family">Uhura</namePart>
+            <namePart type="date"/>
+        </name>
+        <titleInfo>
+            <title>Nyota Uhura</title>
+        </titleInfo>
+    </authority>
+    <variant>
+        <name>
+            <namePart type="given"/>
+            <namePart type="family"/>
+        </name>
+    </variant>
+    <affiliation>
+        <organization>School of Communication</organization>
+        <position>EmeritusProfessor</position>
+        <email/>
+        <phone>555-555-5555</phone>
+        <dateValid point="start">1984</dateValid>
+        <dateValid point="end">2008</dateValid>
+    </affiliation>
+    <fieldOfActivity/>
+    <identifier type="u1"/>
+    <note type="status">retired</note>
+    <note type="history">Nyota is the former Dean of the school and continues to organize the annual Spock Colloquium Series.</note>
+    <note/>
+    <note type="address"/>
+    <url/>
+</mads>

@@ -1,0 +1,14 @@
+name = LIbre Scholar View Blocks
+core = 7.x
+package = Libre Scholar
+version = 7.x-1.0
+dependencies[] = fe_block
+dependencies[] = libre_scholar_display
+dependencies[] = libre_scholar_islandora_views_default
+dependencies[] = views
+features[fe_block_settings][] = views-associated_people-block
+features[fe_block_settings][] = views-author_publications-block
+features[fe_block_settings][] = views-object_stats-block
+features[fe_block_settings][] = views-organization_people-block
+features[fe_block_settings][] = views-organization_publications-block
+features[features_api][] = api:2

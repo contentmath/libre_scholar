@@ -1,0 +1,94 @@
+<?php
+
+function libre_scholar_config_menu_alter(&$items) {
+  $items['islandora']['title'] = 'Repository';
+  $items['islandora/object/%islandora_object/citations']['access callback'] = FALSE;
+  $items['islandora/object/%islandora_object/theses']['access callback'] = FALSE;
+}
+
+function libre_scholar_config_init() {
+  $args = arg();
+  if (count($args) >= 2 && $args[0] == 'islandora' && $args[1] == 'search') {
+    drupal_set_title(t('Results'));
+  }
+}
+
+function libre_scholar_config_islandora_breadcrumbs_alter(&$breadcrumbs, $context, $object = NULL) {
+  foreach ($breadcrumbs as &$crumb) {
+    $no_tag = strip_tags($crumb);
+    if (substr($no_tag, 0, 12) == 'info:fedora/') {
+      $pid = trim(str_replace(array('info:fedora/', '(x)'), '', $no_tag));
+      $object = islandora_object_load($pid);
+      if ($object && isset($object->label)) {
+        $crumb = str_replace('info:fedora/' . $pid, filter_xss($object->label), $crumb);
+      }
+    }
+  }
+}
+
+function libre_scholar_config_block_view_alter(&$data, $block) {
+  // Unfortunately, couldn't find a better place to alter.
+  if ($block->delta == 'current_query') {
+    if (isset($data['content'])) {
+      preg_match_all('/info:fedora\/([A-Za-z0-9]|-|\.)+:(([A-Za-z0-9])|-|\.|~|_|(%[0-9A-F]{2}))+/', $data['content'], $matches);
+      if ($matches) {
+        foreach ($matches[0] as $match) {
+          $pid = trim(str_replace('info:fedora/', '', $match));
+          $object = islandora_object_load($pid);
+          if ($object && isset($object->label)) {
+            $data['content'] = str_replace($match, filter_xss($object->label), $data['content']);
+          }
+        }
+      }
+    }
+  }
+}
+
+function libre_scholar_config_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'islandora_populator_select_form') {
+    $form['selected']['#title'] = t('Metadata input options');
+    $form['selected']['#options']['default']['title'] = t('Form');
+    $form['selected']['#options']['default']['description'] = t('Skip directly to the input form.');
+    if (isset($form['selected']['#options']['doi_populator'])) {
+      $form['selected']['#options']['doi_populator']['title'] = t('DOI');
+    }
+    if (isset($form['selected']['#options']['endnotexml_populator'])) {
+      $form['selected']['#options']['endnotexml_populator']['title'] = t('EndNote XML File');
+    }
+    if (isset($form['selected']['#options']['pmid_populator'])) {
+      $form['selected']['#options']['pmid_populator']['title'] = t('PMID');
+    }
+    if (isset($form['selected']['#options']['ris_populator'])) {
+      $form['selected']['#options']['ris_populator']['title'] = t('RIS File');
+    }
+  }
+}
+
+/**
+ * Implements hook_islandora_xml_form_builder_forms().
+ */
+function libre_scholar_config_islandora_xml_form_builder_forms() {
+  $module_path = drupal_get_path('module', 'libre_scholar_config');
+  return array(
+    'Libre Scholar Citation MODS form' => array(
+      'form_file' => "$module_path/xml/citation_form.xml",
+    ),
+  );
+}
+
+/**
+ * Implements hook_islandora_xml_form_builder_form_associations().
+ */
+function libre_scholar_config_islandora_xml_form_builder_form_associations() {
+  return array(
+    'libre_scholar_citation_mods' => array(
+      'content_model' => 'ir:citationCModel',
+      'form_name' => 'Libre Scholar Citation MODS form',
+      'dsid' => 'MODS',
+      'title_field' => array('titleInfo', 'title'),
+      'transform' => 'mods_to_dc.xsl',
+      'self_transform' => 'islandora_cleanup_mods_extended.xsl',
+      'template' => FALSE,
+    ),
+  );
+}

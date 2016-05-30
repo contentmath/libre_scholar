@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <titleInfo>
+        <title>Subsemiotic theory, rationalism and the cultural paradigm of narrative</title>
+        <subTitle/>
+    </titleInfo>
+    <titleInfo type="abbreviated">
+        <title/>
+    </titleInfo>
+    <genre>journal article</genre>
+    <abstract>If one examines cultural dematerialism, one is faced with a choice: either reject subcapitalist narrative or conclude that narrativity is used to exploit the underprivileged. The characteristic theme of the works of Burroughs is not discourse, as Sontag would have it, but neodiscourse. However, the example of textual postcapitalist theory intrinsic to Burroughs&#x2019;s Naked Lunch is also evident in Queer, although in a more semantic sense.</abstract>
+    <accessCondition type="useAndReproduction"/>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+        <namePart type="given">Nyota</namePart>
+        <namePart type="family">Uhura</namePart>
+        <displayForm>Nyota Uhura</displayForm>
+        <affiliation>School of Communication</affiliation>
+    </name>
+    <name type="corporate">
+        <namePart/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <originInfo>
+        <dateIssued qualifier="">05/12/2007</dateIssued>
+        <publisher>Covehead Press</publisher>
+        <place>
+            <placeTerm type="text"/>
+        </place>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <location>
+        <url/>
+    </location>
+    <note type="type of work"/>
+    <subject>
+        <topic>rationalism</topic>
+    </subject>
+    <subject>
+        <topic>narrative</topic>
+    </subject>
+    <note type="publication status"/>
+    <identifier type="isbn"/>
+    <identifier type="issn">0273-2289</identifier>
+    <identifier type="doi">123456</identifier>
+    <identifier type="accessnum"/>
+    <identifier type="pmc"/>
+    <identifier type="uri"/>
+    <identifier type="citekey"/>
+    <part>
+        <date/>
+        <detail type="volume">
+            <number>4</number>
+        </detail>
+        <detail type="issue">
+            <number>3</number>
+        </detail>
+        <extent unit="page">
+            <start>26</start>
+            <end>49</end>
+        </extent>
+    </part>
+    <language>
+        <languageTerm/>
+    </language>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Communication Theory</title>
+        </titleInfo>
+        <titleInfo type="abbreviated">
+            <title/>
+        </titleInfo>
+        <originInfo>
+            <issuance/>
+        </originInfo>
+        <genre/>
+        <identifier type="issn"/>
+        <identifier type="serial number"/>
+        <name type="corporate">
+            <namePart/>
+            <role>
+                <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            </role>
+        </name>
+    </relatedItem>
+    <note/>
+    <accessCondition type="use and reproduction">author</accessCondition><physicalDescription authority="local">PUBLISHED</physicalDescription>
+</mods>

@@ -1,0 +1,8 @@
+<?php
+
+function libre_scholar_install() {
+  drupal_flush_all_caches();
+  drupal_static_reset();
+  features_revert_module('libre_scholar_view_blocks');
+  module_enable(array('islandora_simple_workflow', 'libre_scholar_anonymous'), TRUE);
+}

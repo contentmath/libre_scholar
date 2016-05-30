@@ -1,0 +1,11 @@
+name = Libre Scholar Settings
+core = 7.x
+package = Libre Scholar
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = islandora_doi_openurl_pid
+features[variable][] = islandora_populator_enable_cmodel_limiting
+features[variable][] = islandora_populator_enabled_cmodels

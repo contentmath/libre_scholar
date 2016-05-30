@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/mods/v3" xmlns:etd="http://www.ndltd.org/standards/metadata/etdms/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <mods:titleInfo>
+        <mods:title>Free Will and Determinism</mods:title>
+        <mods:subTitle/>
+    </mods:titleInfo>
+    <mods:name type="personal">
+        <mods:role>
+            <mods:roleTerm authority="marcrelator" type="text">author</mods:roleTerm>
+        </mods:role>
+        <mods:namePart type="given">B</mods:namePart>
+        <mods:namePart type="family">Libet</mods:namePart>
+    </mods:name>
+    <mods:name type="personal">
+        <mods:role>
+            <mods:roleTerm authority="marcrelator" type="text">Thesis advisor</mods:roleTerm>
+        </mods:role>
+        <mods:displayForm>Nyota Uhura</mods:displayForm>
+    </mods:name>
+    <mods:name type="personal">
+        <mods:role>
+            <mods:roleTerm authority="marcrelator" type="text">Committee member</mods:roleTerm>
+        </mods:role>
+        <mods:displayForm/>
+    </mods:name>
+    <mods:name type="corporate" authority="lcnaf">
+        <mods:role>
+            <mods:roleTerm authority="marcrelator" type="text">Degree grantor</mods:roleTerm>
+        </mods:role>
+        <mods:namePart/>
+        <mods:namePart/>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre>Dissertation/Thesis</mods:genre>
+    <mods:originInfo>
+        <mods:dateIssued keyDate="yes">1970</mods:dateIssued>
+        <mods:issuance>monographic</mods:issuance>
+    </mods:originInfo>
+    <mods:language>
+        <mods:languageTerm authority="iso639-2b" type="code"/>
+    </mods:language>
+    <mods:physicalDescription>
+        <mods:form authority="marcform">electronic</mods:form>
+        <mods:extent/>
+    </mods:physicalDescription>
+    <mods:abstract/>
+    <mods:note/>
+    <mods:location>
+        <mods:url/>
+    </mods:location>
+    <mods:note type="statement of responsibility"/>
+    <mods:subject authority="lcsh">
+        <mods:topic/>
+        <mods:geographic/>
+        <mods:temporal/>
+    </mods:subject>
+    <mods:identifier type="isbn"/>
+    <mods:classification authority="lcc"/>
+    <mods:classification edition="21" authority="ddc"/>
+    <mods:extension>
+        <etd:degree>
+            <etd:name/>
+            <etd:level/>
+            <etd:discipline/>
+        </etd:degree>
+    </mods:extension>
+    <mods:accessCondition type="use and reproduction">author</mods:accessCondition><mods:physicalDescription authority="local">PUBLISHED</mods:physicalDescription></mods:mods>

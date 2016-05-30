@@ -1,0 +1,6 @@
+name = Libre Scholar Anonymous
+description = Hide inactive objects except for users with permission via Islandora Simple Workflow.
+core = 7.x
+version = 7.x-dev
+dependencies[] = islandora
+dependencies[] = islandora_simple_workflow

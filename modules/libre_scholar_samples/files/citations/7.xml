@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <titleInfo>
+        <title>The Influence of Introspective Theory on Replicated Saturated Cryptoanalysis</title>
+        <subTitle/>
+    </titleInfo>
+    <titleInfo type="abbreviated">
+        <title/>
+    </titleInfo>
+    <genre>book chapter</genre>
+    <abstract>If neocapitalist theory holds, we have to choose between Baudrillardist simulacra and neosemantic theory. In a sense, the characteristic theme of the works of Pynchon is the bridge between sexual identity and sexuality.</abstract>
+    <accessCondition type="useAndReproduction"/>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+        <namePart type="given">Hikaru</namePart>
+        <namePart type="family">Sulu</namePart>
+        <displayForm>Hikaru Sulu</displayForm>
+        <affiliation>School of Engineering</affiliation>
+    </name>
+    <name type="corporate">
+        <namePart/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">editor</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <name type="personal">
+        <role>
+            <roleTerm authority="marcrelator" type="text">translator</roleTerm>
+        </role>
+        <namePart type="given"/>
+        <namePart type="family"/>
+    </name>
+    <originInfo>
+        <dateIssued qualifier="">02/12/2008</dateIssued>
+        <publisher>Malpeque Press</publisher>
+        <place>
+            <placeTerm type="text"/>
+        </place>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <location>
+        <url/>
+    </location>
+    <note type="type of work"/>
+    <subject>
+        <topic>cryptography</topic>
+    </subject>
+    <note type="publication status"/>
+    <identifier type="isbn"/>
+    <identifier type="issn">0273-2289</identifier>
+    <identifier type="doi">4532355</identifier>
+    <identifier type="accessnum"/>
+    <identifier type="pmc"/>
+    <identifier type="uri"/>
+    <identifier type="citekey"/>
+    <part>
+        <date/>
+        <detail type="volume">
+            <number/>
+        </detail>
+        <detail type="issue">
+            <number/>
+        </detail>
+        <extent unit="page">
+            <start>88</start>
+            <end>140</end>
+        </extent>
+    </part>
+    <language>
+        <languageTerm/>
+    </language>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Cryptoanalysis Perspectives</title>
+        </titleInfo>
+        <titleInfo type="abbreviated">
+            <title/>
+        </titleInfo>
+        <originInfo>
+            <issuance/>
+        </originInfo>
+        <genre/>
+        <identifier type="issn"/>
+        <identifier type="serial number"/>
+        <name type="corporate">
+            <namePart/>
+            <role>
+                <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            </role>
+        </name>
+    </relatedItem>
+    <note/>
+    <accessCondition type="use and reproduction">author</accessCondition><physicalDescription authority="local">PRE-PUBLICATION</physicalDescription></mods>
